@@ -153,6 +153,32 @@
     }
     </script>
 
+    <!-- SCHEMA: Service - Seniors & Elderly Pick-Ups -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Seniors & Elderly Chauffeured Pick-Up Service Brisbane",
+        "provider": { "@type": "LocalBusiness", "name": "milimo Brisbane Limousine Service" },
+        "serviceType": "Elderly Transport Service",
+        "areaServed": ["Brisbane", "Gold Coast", "Sunshine Coast", "South East Queensland"],
+        "description": "milimo provides patient, door-to-door chauffeured transfers for elderly and senior passengers across Brisbane - medical and specialist appointments, family gatherings, cruise terminal and airport pick-ups. Chauffeurs assist from the front door, help with bags and mobility aids, and families receive a direct contact number for peace of mind."
+    }
+    </script>
+
+    <!-- SCHEMA: Service - Funeral & Memorial Transfers -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Funeral & Memorial Chauffeured Transfers Brisbane",
+        "provider": { "@type": "LocalBusiness", "name": "milimo Brisbane Limousine Service" },
+        "serviceType": "Funeral Transport Service",
+        "areaServed": ["Brisbane", "Gold Coast", "Sunshine Coast", "South East Queensland"],
+        "description": "milimo provides quiet, dignified chauffeured transport for funerals and memorial services across Brisbane and South East Queensland. Immaculate vehicles, professional chauffeurs, family groups kept together, and punctual arrival every time."
+    }
+    </script>
+
     <!-- SCHEMA: FAQPage - All Categories -->
     <script type="application/ld+json">
     {
@@ -161,8 +187,13 @@
         "mainEntity": [
             {
                 "@type": "Question",
+                "name": "How much does limousine hire cost in Brisbane?",
+                "acceptedAnswer": { "@type": "Answer", "text": "milimo local transfers in Brisbane start from $150.00. Wedding car hire starts from approximately $399. School formal packages are priced per group, and airport, corporate, and longer transfers are quoted by destination, vehicle, and duration. Call 1300 884 536 for an exact quote on your journey." }
+            },
+            {
+                "@type": "Question",
                 "name": "How much does wedding car hire cost in Brisbane?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Wedding car hire packages from milimo are tailored to your specific requirements. The average Brisbane wedding car hire is around $936, depending on vehicle selection, number of vehicles, duration, and travel distance. A single Bentley Continental hire for your ceremony will differ from a full fleet package covering bride, groom, bridal party, and family. Call 1300 884 536 for a personalised quote." }
+                "acceptedAnswer": { "@type": "Answer", "text": "milimo wedding car hire starts from approximately $399. The average Brisbane wedding car hire is around $936, depending on vehicle selection, number of vehicles, duration, and travel distance. A single Bentley Continental hire for your ceremony will differ from a full fleet package covering bride, groom, bridal party, and family. Call 1300 884 536 for a personalised quote." }
             },
             {
                 "@type": "Question",
@@ -833,6 +864,20 @@
         .contact-item a { color: rgba(35,32,27,0.78); text-decoration: none; font-size: 0.95rem; }
         .contact-item a:hover { color: var(--gold-deep); }
 
+        /* ADDITIONAL SERVICES */
+        .addon-section { background: var(--cream); }
+        .addon-inner { max-width: 1100px; margin: 0 auto; }
+        .addon-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
+        .addon-card {
+            background: var(--white); border: 1px solid rgba(0,0,0,0.08);
+            border-top: 2px solid var(--navy);
+            box-shadow: 0 2px 10px rgba(35,32,27,0.04);
+            border-radius: 3px; padding: 2.2rem;
+        }
+        .addon-card h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 500; color: var(--navy); margin-bottom: 0.8rem; }
+        .addon-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.8; }
+        @media (max-width: 760px) { .addon-grid { grid-template-columns: 1fr; } }
+
         /* FAQ */
         .faq-section { background: var(--warm); padding: 7rem 2rem; }
         .faq-inner { max-width: 860px; margin: 0 auto; }
@@ -1390,6 +1435,25 @@
     <p class="fleet-note reveal">Plus Mercedes-Benz V-Class, Porsche Cayenne, Renault Master Bus, and coaches seating up to 57 - the deepest fleet range in South East Queensland.</p>
 </section>
 
+<!-- ADDITIONAL SERVICES -->
+<section class="addon-section" id="additional-services">
+    <div class="addon-inner">
+        <div class="tag reveal">Additional Services</div>
+        <h2 class="stitle reveal rd1">The quiet jobs we're <em>trusted</em> with</h2>
+        <p class="stext reveal rd2">Not every journey is a celebration. Some of the most important work milimo does never makes it to a photo album.</p>
+        <div class="addon-grid">
+            <div class="addon-card reveal rd2">
+                <h3>Seniors &amp; Elderly Pick-Ups</h3>
+                <p>Patient, unhurried door-to-door transfers for older passengers across Brisbane - medical and specialist appointments, family gatherings, cruise terminal and airport pick-ups. Your chauffeur walks with you from the front door, helps with bags and mobility aids, and never rushes. Families receive a direct contact number for complete peace of mind.</p>
+            </div>
+            <div class="addon-card reveal rd3">
+                <h3>Funeral &amp; Memorial Transfers</h3>
+                <p>Quiet, dignified chauffeured transport for funerals and memorial services across Brisbane and South East Queensland. Immaculate vehicles, chauffeurs who understand the weight of the day, family groups kept together, and arrival with time to spare - so the only thing you need to think about is each other.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- ABOUT -->
 <section class="about-section" id="about">
     <div class="about-inner" style="max-width: 1100px; margin: 0 auto;">
@@ -1689,7 +1753,7 @@
         <div id="tab-weddings" class="faq-panel active">
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">How much does wedding car hire cost in Brisbane?<span class="faq-toggle">+</span></button>
-                <div class="faq-answer"><p>Wedding car hire packages from milimo are tailored to your specific requirements. The average Brisbane wedding car hire is around $936, depending on vehicle selection, number of vehicles, hire duration, and travel distance. A single Bentley Continental hire for your ceremony will differ from a full fleet package covering the bride, groom, bridal party, and family. Call 1300 884 536 for a personalised quote.</p></div>
+                <div class="faq-answer"><p>milimo wedding car hire starts from approximately $399. The average Brisbane wedding car hire is around $936, depending on vehicle selection, number of vehicles, hire duration, and travel distance. A single Bentley Continental hire for your ceremony will differ from a full fleet package covering the bride, groom, bridal party, and family. Call 1300 884 536 for a personalised quote.</p></div>
             </div>
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">How far in advance should I book wedding car hire?<span class="faq-toggle">+</span></button>
@@ -1759,6 +1823,10 @@
 
         <!-- CORPORATE & DELEGATES FAQ -->
         <div id="tab-corporate" class="faq-panel">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">How much does limousine hire cost in Brisbane?<span class="faq-toggle">+</span></button>
+                <div class="faq-answer"><p>milimo local transfers in Brisbane start from $150.00. Wedding car hire starts from approximately $399. School formal packages are priced per group, and airport, corporate, and longer transfers are quoted by destination, vehicle, and duration. Call 1300 884 536 for an exact quote on your journey.</p></div>
+            </div>
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">How much does an airport transfer from Brisbane Airport cost?<span class="faq-toggle">+</span></button>
                 <div class="faq-answer"><p>milimo provides fixed-price luxury airport transfers so you know exactly what you will pay before you book. Pricing is based on vehicle type and destination. All transfers include real-time flight tracking, 30-minute complimentary wait for domestic arrivals, and 60-minute wait for international arrivals. Contact milimo for a fixed quote for your specific route from Brisbane Airport (BNE), Gold Coast Airport (OOL), or Sunshine Coast Airport (MCY).</p></div>
