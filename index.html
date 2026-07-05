@@ -296,6 +296,8 @@
             --cream: #F5F2ED;
             --warm: #FAF8F3;
             --white: #FFFFFF;
+            --navy: #1B2A41;      /* trust anchor - competence, security, reliability */
+            --navy-deep: #122034;
             --text-muted: rgba(35,32,27,0.68);
         }
 
@@ -425,6 +427,7 @@
         .stitle {
             font-family: 'Playfair Display', serif; font-size: clamp(1.8rem,3.5vw,2.8rem);
             font-weight: 400; line-height: 1.2; margin-bottom: 1.2rem;
+            color: var(--navy); /* navy headings - the brain reads deep blue as competence and safety */
         }
         .stitle em { font-style: italic; color: var(--gold-deep); }
         .stext {
@@ -585,10 +588,11 @@
         .safety-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
         .safety-card {
             background: var(--white); border: 1px solid rgba(0,0,0,0.08);
+            border-top: 2px solid var(--navy);
             box-shadow: 0 2px 10px rgba(35,32,27,0.04);
             border-radius: 3px; padding: 1.8rem;
         }
-        .safety-card h4 { font-family: 'Playfair Display', serif; font-size: 1rem; margin-bottom: 0.5rem; font-weight: 500; }
+        .safety-card h4 { font-family: 'Playfair Display', serif; font-size: 1rem; margin-bottom: 0.5rem; font-weight: 500; color: var(--navy); }
         .safety-card p { font-size: 0.82rem; color: rgba(35,32,27,0.6); line-height: 1.6; }
         .photo-spots { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
         .photo-spot-tag {
